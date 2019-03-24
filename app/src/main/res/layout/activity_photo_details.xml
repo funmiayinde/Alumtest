@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PhotoDetailsActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/itemPhotoDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <RelativeLayout
+            android:id="@+id/titleRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemPhotoDetails"
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/titleDetailsTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title 1"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <TextView
+                android:id="@+id/itemDescriptionDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@id/titleDetailsTxtView"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/itemDescriptionDetails"
+                android:text=" GO"
+                android:layout_marginLeft="40dp"
+                android:textColor="#000" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/itemDescriptionMoreDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum_is"
+            android:layout_below="@id/titleRelativeLayout"
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="#000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itemDescriptionMoreDetails"
+            android:layout_marginTop="100dp">
+
+            <Button
+                android:id="@+id/callButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/ic_menu_call" />
+
+            <Button
+                android:id="@+id/messageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/ic_menu_save"
+                android:layout_toRightOf="@id/callButton"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
